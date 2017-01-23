@@ -162,7 +162,8 @@ header {
       font-size: 2.2rem;
       color: #42b9d0;
       padding: 50px 0 42px 0;
-      letter-spacing: 0.2rem; }
+      letter-spacing: 0.2rem;
+      margin-bottom: 20px; }
     #news_area .news_lists li {
       list-style: none;
       font-size: 14px;
@@ -249,19 +250,16 @@ h1 {
 #sub_cover {
   background-image: url("../images/news/sub_cover.jpg");
   background-size: cover;
-  padding: 40px 0;
-  height: 20px; }
+  padding: 40px 0; }
   @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
     #sub_cover {
       background-image: url("../images/news/sub_cover@2x.jpg"); } }
   #sub_cover h2 {
-    font-family: "ヒラギノ角ゴ pro W3", "Hiragino kaku Gothic pro", メイリオ, Verdana, "MS Pゴシック", sans-serif;
     color: white;
     text-align: center;
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 2px;
-    line-height: 20px;
     margin: 0; }
 
 /* 白い文字のニュースのところ */
@@ -271,11 +269,13 @@ h1 {
   line-height: 24px; }
   #contents .container {
     margin: 0 auto;
-    padding: 0 20px;
     position: relative;
     display: block;
     line-height: 24px;
     max-width: 960px; }
+    @media (min-width: 400px) {
+      #contents .container {
+        padding: 0; } }
     #contents .container #main .news_title {
       display: block;
       border-bottom: 3px solid #42b9d0;
@@ -284,10 +284,9 @@ h1 {
       font-weight: bold;
       letter-spacing: -1px;
       margin-bottom: 20px;
-      padding-bottom: 15px;
-      height: 18px; }
+      padding-bottom: 15px; }
     @media (min-width: 550px) {
-      #contents .container #main h2 {
+      #contents .container #main .news_title {
         font-size: 2rem;
         padding-bottom: 20px; } }
     #contents .container ul {
@@ -304,8 +303,7 @@ h1 {
           line-height: 24px;
           list-style: none;
           margin-bottom: 3px;
-          text-align: left;
-          font-family: "ヒラギノ角ゴ pro W3", "Hiragino kaku Gothic pro", メイリオ, Verdana, "MS Pゴシック", sans-serif; }
+          text-align: left; }
         @media (min-width: 550px) {
           #contents .container ul li span {
             display: inline-block;
@@ -392,6 +390,7 @@ table {
   border-spacing: 0; }
   table th {
     padding-right: 20px;
+    font-size: 14px;
     color: #626262; }
   table td {
     padding: 20px 0;
@@ -413,7 +412,7 @@ table {
       width: 80%; } }
   @media (min-width: 400px) {
     #contents .container {
-      width: 85%;
+      width: 80%;
       padding: 0; } }
   @media (min-width: 550px) {
     #contents .container #main {
@@ -433,5 +432,10 @@ table {
       #contents .container #main .company_title {
         font-size: 2rem;
         padding-bottom: 20px; } }
+
+@media (min-width: 400px) {
+  #content .container {
+    width: 80%;
+    padding: 0; } }
 
 /*# sourceMappingURL=sample.css.map */
